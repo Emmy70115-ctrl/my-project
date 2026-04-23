@@ -82,10 +82,7 @@ app.delete("/books/:id", (req, res) => {
     res.json({ message: "Book deleted successfully" });
   });
 });
-  db.query("DELETE FROM books WHERE id=?", [id], (err, result) => {
-    if (err) return res.status(500).json(err);
-    res.json({ message: "Book deleted successfully" });
-  });
+ 
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
